@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kallol Chakrabarti — World's Most Documented Independent Researcher | HelixOriginator</title>
+<meta name="description" content="Kallol Chakrabarti: Independent researcher, DeSci advocate, and policy architect from Lucknow. 511 web deployments, 269 DOIs, 100+ policy proposals. The world's most extensively documented unaffiliated scholar." />
+<meta name="keywords" content="Kallol Chakrabarti, HelixOriginator, independent researcher, DeSci, DOI, Zenodo, SSRN, Docu Helix, policy research, AI governance, Bharatverse, open knowledge" />
+<meta name="author" content="Kallol Chakrabarti" />
+<meta property="og:title" content="Kallol Chakrabarti — World's Most Documented Independent Researcher" />
+<meta property="og:description" content="511 web deployments, 269 DOIs, 100+ policy proposals. The world's most extensively documented unaffiliated scholar." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg-deep: #080C14;
+    --bg-card: #0F1623;
+    --bg-card2: #141B2D;
+    --accent-blue: #3B82F6;
+    --accent-cyan: #06B6D4;
+    --accent-emerald: #10B981;
+    --accent-amber: #F59E0B;
+    --text-primary: #F0F4FF;
+    --text-muted: #8892A4;
+    --border-dim: rgba(59,130,246,0.15);
+    --glow-blue: rgba(59,130,246,0.35);
+    --glow-cyan: rgba(6,182,212,0.3);
+    --grid-line: rgba(59,130,246,0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Grid overlay background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ambient glows */
+  .ambient-glow-1 {
+    position: fixed;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .ambient-glow-2 {
+    position: fixed;
+    bottom: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  /* All sections above pseudo-elements */
+  section, header, footer, nav { position: relative; z-index: 1; }
+
+  /* NAVBAR */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(8,12,20,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-dim);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+
+  /* STATUS BADGE */
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: #10B981;
+    letter-spacing: 0.1em;
+  }
+  .status-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #10B981;
+    animation: pulse-green 1.8s infinite;
+  }
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.6); }
+    50% { box-shadow: 0 0 0 5px rgba(16,185,129,0); }
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 7rem 2rem 5rem;
+  }
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent-cyan);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    line-height: 1.05;
+    max-width: 950px;
+    background: linear-gradient(135deg, #F0F4FF 0%, #93C5FD 50%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    line-height: 1.75;
+    margin-bottom: 3rem;
+  }
+  .hero-sub span { color: #93C5FD; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: linear-gradient(135deg, #3B82F6, #06B6D4);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 30px rgba(59,130,246,0.3);
+    letter-spacing: 0.03em;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 45px rgba(59,130,246,0.5);
+  }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid rgba(59,130,246,0.35);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(6,182,212,0.07);
+    box-shadow: 0 0 20px rgba(6,182,212,0.15);
+  }
+
+  /* Screenshot proof buttons */
+  .proof-btns {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .btn-proof {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: rgba(15,22,35,0.9);
+    border: 1px solid rgba(59,130,246,0.3);
+    color: #93C5FD;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.25s;
+  }
+  .btn-proof:hover {
+    border-color: var(--accent-blue);
+    background: rgba(59,130,246,0.12);
+    box-shadow: 0 0 20px rgba(59,130,246,0.2);
+    color: #fff;
+  }
+  .btn-proof .icon { font-size: 0.9rem; }
+
+  /* Hero stats bar */
+  .hero-stats {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-dim);
+    width: 100%; max-width: 900px;
+  }
+  .hero-stat-item { text-align: center; }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--accent-cyan);
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* SECTION TITLES */
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* METRIC CARDS */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .metric-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 12px;
+    padding: 2rem 1.8rem;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--card-accent, #3B82F6), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 45px rgba(0,0,0,0.4), 0 0 30px var(--glow-blue);
+    border-color: rgba(59,130,246,0.4);
+  }
+  .metric-card:hover::before { opacity: 1; }
+
+  .metric-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+  .metric-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    background: linear-gradient(135deg, #F0F4FF, #93C5FD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .metric-label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  .metric-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Counter animation */
+  @keyframes count-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .metric-num { animation: count-up 0.6s ease forwards; }
+
+  /* MANIFESTO SECTION */
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  @media (max-width: 768px) { .manifesto-grid { grid-template-columns: 1fr; } }
+
+  .manifesto-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 14px;
+    padding: 2.5rem;
+  }
+  .manifesto-block h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+  }
+  .manifesto-block p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .manifesto-block p strong { color: #93C5FD; }
+
+  /* Timeline */
+  .timeline { margin-top: 1.5rem; }
+  .tl-item {
+    display: flex; gap: 1rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+  }
+  .tl-dot {
+    flex-shrink: 0;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    margin-top: 6px;
+    position: relative;
+  }
+  .tl-dot::after {
+    content: '';
+    position: absolute;
+    top: 10px; left: 4px;
+    width: 2px; height: calc(100% + 10px);
+    background: var(--border-dim);
+  }
+  .tl-item:last-child .tl-dot::after { display: none; }
+  .tl-content { flex: 1; }
+  .tl-content strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+  }
+  .tl-content span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  /* TAXONOMY */
+  .tax-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .tax-card {
+    background: var(--bg-card2);
+    border: 1px solid var(--border-dim);
+    border-radius: 12px;
+    padding: 2rem 1.8rem;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .tax-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 32px rgba(6,182,212,0.12);
+    transform: translateY(-4px);
+  }
+  .tax-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent-cyan);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+  .tax-icon {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .tax-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  .tax-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* PROOF SECTION */
+  .proof-section {
+    background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(6,182,212,0.04));
+    border: 1px solid var(--border-dim);
+    border-radius: 16px;
+    padding: 3.5rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .proof-section p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+  }
+  .proof-section p strong { color: var(--text-primary); }
+
+  .platform-badges {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    transition: all 0.2s;
+  }
+  .badge:hover {
+    border-color: rgba(59,130,246,0.4);
+    color: var(--text-primary);
+    background: rgba(59,130,246,0.07);
+  }
+  .badge i { font-size: 1rem; }
+
+  /* Screenshot evidence section */
+  .evidence-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-top: 5rem;
+  }
+  .evidence-btns {
+    display: flex; flex-wrap: wrap; gap: 1.2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .btn-evidence {
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: none;
+  }
+  .btn-evidence-github {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: #F9FAFB;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .btn-evidence-github:hover {
+    background: linear-gradient(135deg, #374151, #4B5563);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+  }
+  .btn-evidence-netlify {
+    background: linear-gradient(135deg, #00C7B7, #00AD9F);
+    color: white;
+  }
+  .btn-evidence-netlify:hover {
+    box-shadow: 0 8px 28px rgba(0,199,183,0.35);
+    transform: translateY(-2px);
+  }
+  .btn-evidence-icon { font-size: 1.2rem; }
+  .btn-evidence-text { line-height: 1.2; }
+  .btn-evidence-title { display: block; font-weight: 600; font-size: 0.88rem; }
+  .btn-evidence-sub { display: block; font-size: 0.72rem; opacity: 0.75; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border-dim);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .footer-copy {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+  }
+  .footer-legal {
+    font-size: 0.75rem;
+    color: rgba(138,152,164,0.5);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* UTILITY */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .section-pad { padding: 6rem 0; }
+  .divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    border-radius: 2px;
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  /* Responsive nav */
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .manifesto-grid { grid-template-columns: 1fr; }
+    .proof-section { padding: 2rem; }
+    .evidence-section { padding: 2rem; }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient-glow-1"></div>
+<div class="ambient-glow-2"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <i class="fas fa-dna" style="margin-right:0.5rem; color: #06B6D4;"></i>
+    HelixOriginator
+  </div>
+  <div class="nav-links">
+    <a href="#ledger">Evidence Ledger</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#taxonomy">Domains</a>
+    <a href="#verification">Verification</a>
+  </div>
+  <div class="status-badge">
+    <div class="status-dot"></div>
+    SYSTEM: VERIFIED & ARCHIVE-LOCKED
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">
+      <i class="fas fa-shield-halved" style="margin-right:0.4rem;"></i>
+      Kallol Chakrabarti · HelixOriginator · Lucknow, India
+    </p>
+
+    <h1 class="hero-title">
+      INDEPENDENT INTELLECTUAL<br/>INFRASTRUCTURE<br/>AT WORLD-RECORD SCALE.
+    </h1>
+
+    <p class="hero-sub">
+      Unaffiliated. Self-funded. <span>Cryptographically Verified.</span><br/>
+      An open-access universe of intellectual property built outside institutional walls —
+      exhaustively documented, legally protected, and publicly accessible.
+    </p>
+
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+      <a href="#ledger" class="btn-primary">
+        <i class="fas fa-chart-bar"></i>
+        Explore the Evidence Ledger
+      </a>
+      <a href="#verification" class="btn-ghost">
+        <i class="fas fa-lock"></i>
+        Verification Architecture
+      </a>
+    </div>
+
+    <!-- Screenshot Proof Buttons -->
+    <div class="proof-btns">
+      <a href="https://github.com/HelixOriginator" target="_blank" class="btn-proof">
+        <i class="fab fa-github icon"></i>
+        View 211 GitHub Repositories
+        <i class="fas fa-arrow-up-right-from-square" style="font-size:0.6rem; opacity:0.6;"></i>
+      </a>
+      <a href="https://app.netlify.com/teams/kallolchitralimagicpen-gmail-com/projects" target="_blank" class="btn-proof">
+        <i class="fas fa-globe icon"></i>
+        View 300 Netlify Deployments
+        <i class="fas fa-arrow-up-right-from-square" style="font-size:0.6rem; opacity:0.6;"></i>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">511</span>
+        <span class="hero-stat-label">Web Deployments</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">269</span>
+        <span class="hero-stat-label">Registered DOIs</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">100+</span>
+        <span class="hero-stat-label">Policy Proposals</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">25</span>
+        <span class="hero-stat-label">Copyrights</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">10</span>
+        <span class="hero-stat-label">Published Works</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- EVIDENCE LEDGER -->
+<section id="ledger" class="section-pad">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">§ 01 — THE EVIDENCE LEDGER</p>
+      <h2 class="section-title">Core Metrics<br/>Verification Grid</h2>
+      <div class="divider"></div>
+      <p class="section-desc">Every metric is backed by live hyperlinks, legal registrations, and cryptographic timestamps. Not claims — infrastructure.</p>
+    </div>
+
+    <div class="metrics-grid">
+
+      <div class="metric-card reveal" style="--card-accent: #3B82F6;">
+        <div class="metric-icon" style="background:rgba(59,130,246,0.12); color:#3B82F6;">
+          <i class="fas fa-server"></i>
+        </div>
+        <div class="metric-num">511</div>
+        <div class="metric-label">Active Web Deployments</div>
+        <div class="metric-sub">211 Static GitHub Repositories + 300 Dynamic Netlify Deployments — each a node in a living, breathing research network.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #06B6D4;">
+        <div class="metric-icon" style="background:rgba(6,182,212,0.12); color:#06B6D4;">
+          <i class="fas fa-fingerprint"></i>
+        </div>
+        <div class="metric-num">269</div>
+        <div class="metric-label">Registered Digital Object Identifiers</div>
+        <div class="metric-sub">DOIs registered across Zenodo, SSRN, and Figshare — permanent, citable, globally indexed research artifacts.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #F59E0B;">
+        <div class="metric-icon" style="background:rgba(245,158,11,0.12); color:#F59E0B;">
+          <i class="fas fa-landmark"></i>
+        </div>
+        <div class="metric-num">100+</div>
+        <div class="metric-label">Formal Policy Proposals</div>
+        <div class="metric-sub">Submitted directly to sovereign government departments via documented Gmail correspondence — a verifiable public-interest archive.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #8B5CF6;">
+        <div class="metric-icon" style="background:rgba(139,92,246,0.12); color:#8B5CF6;">
+          <i class="fas fa-shield-check"></i>
+        </div>
+        <div class="metric-num">25</div>
+        <div class="metric-label">Registered Copyrights & IP Protections</div>
+        <div class="metric-sub">Legally secured intellectual property holdings spanning research frameworks, literary works, and digital architectures.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #10B981;">
+        <div class="metric-icon" style="background:rgba(16,185,129,0.12); color:#10B981;">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="metric-num">10</div>
+        <div class="metric-label">Published Literary Works</div>
+        <div class="metric-sub">2 Print Editions on Amazon Kindle + 8 Specialized E-Books — extending research into permanent, indexed, retail-distributed formats.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #EC4899;">
+        <div class="metric-icon" style="background:rgba(236,72,153,0.12); color:#EC4899;">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <div class="metric-num">4</div>
+        <div class="metric-label">Journal Publications</div>
+        <div class="metric-sub">Peer-reviewed and independent journal publications establishing scholarly credibility beyond traditional institutional affiliation.</div>
+      </div>
+
+      <div class="metric-card reveal" style="--card-accent: #06B6D4;">
+        <div class="metric-icon" style="background:rgba(6,182,212,0.1); color:#06B6D4;">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="metric-num">20+</div>
+        <div class="metric-label">Cross-Platform Neural Architectures</div>
+        <div class="metric-sub">Custom AI ecosystems built on Wix, Notion AI, and proprietary frameworks — extending knowledge infrastructure into live intelligent systems.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" class="section-pad" style="background: linear-gradient(180deg, rgba(59,130,246,0.03) 0%, transparent 100%);">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">§ 02 — THE MANIFESTO</p>
+      <h2 class="section-title">Research Without<br/>University</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-block reveal">
+        <h3><i class="fas fa-unlock-keyhole" style="color:#3B82F6; margin-right:0.6rem;"></i>The Philosophy of Independence</h3>
+        <p>Traditional academic institutions operate on gatekeeping: peer-review hierarchies that reward conformity, grant systems that distort research direction, and citation networks that exclude outsider knowledge. <strong>Independent scholarship breaks this.</strong></p>
+        <p>By operating outside institutional walls — self-funded, unaffiliated, accountable only to public interest — this body of work carries a bias-immunity impossible inside university systems beholden to political funding, ideological fashion, and departmental politics.</p>
+        <p>The result is <strong>pure, original, ethically uncompromised research</strong> that can engage directly with governance structures, cultural preservation, and technological futures without institutional permission.</p>
+        <p>Every work published here stands on its own citation merit — not on institutional prestige borrowed from a letterhead.</p>
+      </div>
+
+      <div class="manifesto-block reveal">
+        <h3><i class="fas fa-dna" style="color:#06B6D4; margin-right:0.6rem;"></i>The Docu Helix Methodology</h3>
+        <p style="margin-bottom:1.4rem;">A proprietary documentation architecture where every asset is simultaneously created, timestamped, archived, and legally secured in a self-referencing spiral of proof.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#3B82F6;"></div>
+            <div class="tl-content">
+              <strong>Layer 1 — Creation & Publication</strong>
+              <span>Research authored and published to open-access repositories (Zenodo, SSRN, Figshare) with immediate DOI registration.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#06B6D4;"></div>
+            <div class="tl-content">
+              <strong>Layer 2 — Web Deployment</strong>
+              <span>Live deployments on GitHub Pages and Netlify create permanent, indexable, hyperlinked public records.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#10B981;"></div>
+            <div class="tl-content">
+              <strong>Layer 3 — Legal Anchoring</strong>
+              <span>Copyright registrations and IP protections legally bind authorship to a verifiable identity and timestamp.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#8B5CF6;"></div>
+            <div class="tl-content">
+              <strong>Layer 4 — Government Correspondence</strong>
+              <span>Policy proposals submitted via official channels create sovereign-level documentary evidence of civic engagement.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:#F59E0B;"></div>
+            <div class="tl-content">
+              <strong>Layer 5 — Cross-Archive Redundancy</strong>
+              <span>Every asset exists across multiple independent platforms — no single point of deletion, censorship, or institutional capture.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAXONOMY -->
+<section id="taxonomy" class="section-pad">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">§ 03 — MULTIDISCIPLINARY TAXONOMY</p>
+      <h2 class="section-title">Domains of<br/>Documented Study</h2>
+      <div class="divider"></div>
+      <p class="section-desc">A research universe spanning the most critical intersections of governance, technology, law, and culture.</p>
+    </div>
+
+    <div class="tax-grid">
+      <div class="tax-card reveal">
+        <div class="tax-num">DOMAIN · 01</div>
+        <div class="tax-icon">🏛️</div>
+        <div class="tax-title">Governance Innovation & Technology Policy</div>
+        <div class="tax-desc">Frameworks for AI-assisted public administration, digital sovereignty, and next-generation regulatory architecture for the Global South.</div>
+      </div>
+      <div class="tax-card reveal">
+        <div class="tax-num">DOMAIN · 02</div>
+        <div class="tax-icon">⛓️</div>
+        <div class="tax-title">Digital Infrastructure & DeSci</div>
+        <div class="tax-desc">Decentralized science architectures, open-access research protocols, and permanent knowledge infrastructure outside institutional control.</div>
+      </div>
+      <div class="tax-card reveal">
+        <div class="tax-num">DOMAIN · 03</div>
+        <div class="tax-icon">⚖️</div>
+        <div class="tax-title">Sovereign Legal Frameworks & AI-Driven Public Architecture</div>
+        <div class="tax-desc">Constitutionally grounded legal frameworks for AI integration into public institutions, dispute resolution, and citizen data sovereignty.</div>
+      </div>
+      <div class="tax-card reveal">
+        <div class="tax-num">DOMAIN · 04</div>
+        <div class="tax-icon">🪔</div>
+        <div class="tax-title">Cultural Preservation & The Bharatverse</div>
+        <div class="tax-desc">Digital preservation of Indian civilizational knowledge — Sanatan Dharma, classical traditions, and indigenous epistemology — through DOI-linked open archives.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT EVIDENCE SECTION -->
+<section id="evidence" class="section-pad">
+  <div class="container">
+    <div class="evidence-section reveal">
+      <p class="section-label" style="text-align:center; margin-bottom:0.8rem;">§ 04 — LIVE DEPLOYMENT PROOF</p>
+      <h2 class="section-title" style="text-align:center; font-size:clamp(1.5rem,3.5vw,2.2rem);">Verified Infrastructure<br/>Dashboards</h2>
+      <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+      <p style="text-align:center; color:var(--text-muted); max-width:600px; margin:0 auto 2rem; font-size:0.92rem; line-height:1.7;">
+        The following dashboards represent real, active, publicly verifiable infrastructure. Click to inspect the live platforms — 211 GitHub repositories and 300 Netlify deployments, all owned and operated by <strong style="color:var(--text-primary);">Kallol Chakrabarti</strong>.
+      </p>
+      <div class="evidence-btns">
+        <a href="https://github.com/HelixOriginator?tab=repositories" target="_blank" class="btn-evidence btn-evidence-github">
+          <span class="btn-evidence-icon"><i class="fab fa-github"></i></span>
+          <span class="btn-evidence-text">
+            <span class="btn-evidence-title">GitHub Repositories Dashboard</span>
+            <span class="btn-evidence-sub">211 Public Repositories · HelixOriginator</span>
+          </span>
+          <i class="fas fa-external-link-alt" style="font-size:0.75rem; opacity:0.5; margin-left:0.5rem;"></i>
+        </a>
+        <a href="https://app.netlify.com/teams/kallolchitralimagicpen-gmail-com/projects" target="_blank" class="btn-evidence btn-evidence-netlify">
+          <span class="btn-evidence-icon"><i class="fas fa-globe"></i></span>
+          <span class="btn-evidence-text">
+            <span class="btn-evidence-title">Netlify Projects Dashboard</span>
+            <span class="btn-evidence-sub">300 Live Deployments · Page 1 of 12</span>
+          </span>
+          <i class="fas fa-external-link-alt" style="font-size:0.75rem; opacity:0.5; margin-left:0.5rem;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFICATION & TRUST -->
+<section id="verification" class="section-pad" style="background: linear-gradient(180deg, rgba(6,182,212,0.03) 0%, transparent 100%);">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">§ 05 — VERIFICATION & TRUST</p>
+      <h2 class="section-title">The Proof<br/>Architecture</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="proof-section reveal">
+      <p>
+        <strong>Every metric displayed on this domain is backed by cryptographic proof, active hyperlinks, legal registrations, and official government correspondence ledgers.</strong><br/><br/>
+        This is not a résumé. It is a verifiable evidence infrastructure — built over years of uninterrupted, self-funded scholarly production — accessible, auditable, and legally protected against any claim of fabrication or institutional override.
+      </p>
+
+      <div class="platform-badges">
+        <div class="badge"><i class="fab fa-github"></i> GITHUB · 211 REPOS</div>
+        <div class="badge"><i class="fas fa-globe"></i> NETLIFY · 300 SITES</div>
+        <div class="badge"><i class="fas fa-fingerprint"></i> ZENODO · DOIs</div>
+        <div class="badge"><i class="fas fa-scroll"></i> SSRN · PAPERS</div>
+        <div class="badge"><i class="fab fa-amazon"></i> AMAZON KINDLE</div>
+        <div class="badge"><i class="fas fa-database"></i> FIGSHARE · DATA</div>
+        <div class="badge"><i class="fas fa-envelope"></i> GOVT. CORRESPONDENCE</div>
+        <div class="badge"><i class="fas fa-gavel"></i> REGISTERED COPYRIGHTS</div>
+      </div>
+
+      <a href="https://github.com/HelixOriginator" target="_blank" class="btn-primary" style="font-size:0.85rem;">
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        Access the Full Verification Ledger
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.6rem; margin-bottom:1.2rem;">
+      <i class="fas fa-dna" style="color:#06B6D4; font-size:1.2rem;"></i>
+      <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:1rem; color:var(--text-primary);">HelixOriginator</span>
+    </div>
+    <p class="footer-copy">© 2026 KALLOL CHAKRABARTI · HELIXORIGINATOR · ALL INTELLECTUAL PROPERTY RIGHTS RESERVED</p>
+    <p class="footer-legal">
+      This domain and all intellectual property herein — including research frameworks, policy architectures, literary works, and digital ecosystems — are the sole creation of Kallol Chakrabarti, an independent, unaffiliated researcher operating under principles of independent intellectual sovereignty. Unauthorized reproduction, institutional appropriation, or misattribution of any documented work constitutes a violation of registered intellectual property protections. All metrics are verifiable through publicly accessible third-party archives.
+    </p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// Animated counter
+function animateCounter(el, target, duration = 1800) {
+  const isFloat = String(target).includes('.');
+  let start = null;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(eased * target);
+    el.textContent = value + (el.dataset.suffix || '');
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target + (el.dataset.suffix || '');
+  };
+  requestAnimationFrame(step);
+}
+
+// Trigger counters on scroll
+const metricNums = document.querySelectorAll('.metric-num');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const raw = el.textContent.replace('+','');
+      const num = parseInt(raw);
+      const hasSuffix = el.textContent.includes('+');
+      el.dataset.suffix = hasSuffix ? '+' : '';
+      if (!isNaN(num)) animateCounter(el, num);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+metricNums.forEach(el => counterObserver.observe(el));
+</script>
+
+</body>
+</html>
